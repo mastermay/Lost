@@ -25,7 +25,7 @@
 	}
 ?>
 
-<article class="post <?php echo $postnew;?>" itemscope itemtype="http://schema.org/Article">
+<article class="post layout-center<?php echo ' '.$postnew;?>" itemscope itemtype="http://schema.org/Article">
 	<?php if( has_post_thumbnail() ) { ?>
 	<figure class="post-thumb">
 		<a rel="bookmark" href="<?php the_permalink(); ?>">

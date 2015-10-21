@@ -52,9 +52,9 @@
 	<div class="loading-bar"></div>
 	<div id="wrap">
 		<div id="header" class="standard">
-			<div class="header-wrap">
+			<div class="header-wrap layout-center">
 				<h1 class="site-title"><a href="<?php bloginfo('url'); ?>"><?php bloginfo('name')?></a></h1>
-				<div id="menu-btn">
+				<div id="header-menu">
 					<i class="iconfont icon-liebiao"></i>
 					<?php 
 						if(function_exists('wp_nav_menu')) {
