@@ -638,6 +638,7 @@ a.linkedin:hover {
 #header {
 	position:relative;
 	height:600px;
+	color: #fff;
 	background:url('images/bg.jpg');
 	background-size: cover;
 	background-attachment: fixed;
@@ -648,7 +649,7 @@ a.linkedin:hover {
 	content: '';
 	left: 0;
 	bottom: 0;
-	height:150px;
+	height:100px;
 	width: 100%;
 	background-image: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
 	background-image: linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
@@ -667,8 +668,8 @@ a.linkedin:hover {
 	margin-top: 1rem;
 	padding-top: 0.5rem;
 	padding-bottom: 0.5rem;
-	border-top: 1px solid #666;
-	border-bottom: 1px solid #666;
+	border-top: 1px solid #eee;
+	border-bottom: 1px solid #eee;
 }
 #header-menu .menu li{
 	display: inline-block;
@@ -699,7 +700,7 @@ a.linkedin:hover {
 	content: '';
 	left: 0;
 	top: 0;
-	height:150px;
+	height:100px;
 	width: 100%;
 	background-image: -webkit-linear-gradient(bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
 	background-image: linear-gradient(bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
@@ -714,7 +715,7 @@ a.linkedin:hover {
 }
 #footer .footer-wp {
 	margin-top: 10px;
-	color: #333;
+	color: #fff;
 	font-size: 0.875rem;
 	font-family: Palatino, Optima, Georgia, serif;
 	font-style: italic;
