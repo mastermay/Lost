@@ -12,8 +12,8 @@
 
 	<footer id="footer" role="contentinfo" itemscope itemtype="http://schema.org/WPFooter">
 		<div class="footer-wrap">
-			<div class="footer-info"><p><?php echo lo_opt('footer_info');?></p></div>
-			<div class="footer-wp"><p>Proudly powered by <a href="https://wordpress.org/" target="_blank">WordPress</a> · Theme by <a href="http://lostg.com" target="_blank">Javis</a></p></div>
+			<div class="information"><p><?php echo lo_opt('footer_info');?></p></div>
+			<div class="copyright"><p>Proudly powered by <a href="https://wordpress.org/" target="_blank">WordPress</a> · Theme by <a href="http://lostg.com" target="_blank">Javis</a></p></div>
 		</div>
 	</footer>
 </div>
