@@ -40,7 +40,12 @@
 			<?php if(lo_opt('series_is_open')) { ?><sup><?php echo lo_get_category_only(get_the_ID(), 'series')?></sup><?php } ?>
 		</h2>
     </header>
-
+	<div class="post-meta">
+		<ul>
+			<li><?php the_category(','); ?></li>
+			<li><time datetime="<?php echo esc_attr( get_the_date( 'c' ) ); ?>" itemprop="datePublished" pubdate><?php if(lo_opt('time_style')=='1') the_time('Y-m-d'); elseif(lo_opt('time_style')=='2') the_time('Y/m/d'); elseif(lo_opt('time_style')=='3') the_time('d-m-Y'); else the_time('d/m/Y');?></time></li>
+		</ul>
+	</div>
     <div class="post-content clearfix" itemprop="description">
 		<?php
 		$pc=$post->post_content;
@@ -54,11 +59,4 @@
 		else the_content('');
 		?>
     </div>
-
-    <footer class="post-meta">
-		<ul>
-			<li><?php the_category(','); ?></li>
-			<li><time datetime="<?php echo esc_attr( get_the_date( 'c' ) ); ?>" itemprop="datePublished" pubdate><?php if(lo_opt('time_style')=='1') the_time('Y-m-d'); elseif(lo_opt('time_style')=='2') the_time('Y/m/d'); elseif(lo_opt('time_style')=='3') the_time('d-m-Y'); else the_time('d/m/Y');?></time></li>
-		</ul>
-	</footer>
 </article>

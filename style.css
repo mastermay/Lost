@@ -681,6 +681,7 @@ a.linkedin:hover {
  */
 #content {
 	position: relative;
+	margin-top: 20px;
 	background: #fff;
 	z-index: 5;
 }
@@ -690,7 +691,7 @@ a.linkedin:hover {
  */
 #footer {
 	position:relative;
-	height:400px;
+	height:450px;
 	background:url('images/bg.jpg');
 	background-size: cover;
 	background-attachment: fixed;
@@ -713,10 +714,91 @@ a.linkedin:hover {
 	margin-right: auto;
 	text-align: center;
 }
+#footer .information {
+	color: #fff;
+}
 #footer .copyright {
 	margin-top: 10px;
-	color: #fff;
+	color: #eee;
 	font-size: 0.875rem;
 	font-family: Palatino, Optima, Georgia, serif;
 	font-style: italic;
 }
+
+
+/*
+ * post global
+ */
+
+.post-name {
+	font-size: 1.25rem;
+}
+.post-meta {
+	font-size: .75rem;
+	color: #888;
+}
+.post-meta li {
+	display: inline-block;
+	margin-right: .5rem
+}
+
+/*
+ * index post
+ */
+.post {
+	margin-bottom: 20px;
+	padding-bottom: 20px;
+	border-bottom: 2px dashed #eee;
+}
+
+
+
+.pagenvi {
+	text-align: center;
+	margin-top: 40px;
+	margin-bottom: 60px;
+}
+
+.pagenvi a{
+	display: inline-block;
+	width: 2rem;
+	height: 2rem;
+	margin: 0 .5rem;
+	color: #ccc;
+	line-height: 2rem;
+	border: 1px solid #ccc;
+	border-radius: 50%;
+}
+
+.pagenvi a.current,
+.pagenvi a:hover {
+	color: #666;
+	border-color: #666;
+}
+
+/*
+ * single
+ */
+#crumbs {
+	font-size: .75rem;
+	color:#c2c2c2;
+}
+#crumbs li {
+	display:inline-block;
+}
+#crumbs li:after {
+	content:"›";
+	margin:0 2px;
+}
+#crumbs li:last-child:after {
+	content:""
+}
+.single .post-content {
+	margin-top: 20px;
+	margin-bottom: 20px;	
+}
+.single .post-info li {
+	font-size: .875rem;
+	color: #bbb;
+}
+

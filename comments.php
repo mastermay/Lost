@@ -34,7 +34,7 @@ if(comments_open()) {?>
 		<form action="#" method="post" id="commentform" class="clearfix">
 			<?php if ( $user_ID ) { ?>
 			<div class="comment-saved-author fontJH">
-				<a href="<?php echo get_option('siteurl'); ?>/wp-admin/profile.php"><?php echo $user_identity; ?>
+				<a href="<?php echo get_option('siteurl'); ?>/wp-admin/profile.php"><?php echo $user_identity; ?></a>
 			</div>
 			<?php } else {
 				if(!empty($comment_author) && !empty($comment_author_email)){ ?>
