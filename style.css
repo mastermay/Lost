@@ -703,8 +703,8 @@ a.linkedin:hover {
 	top: 0;
 	height:100px;
 	width: 100%;
-	background-image: -webkit-linear-gradient(bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
-	background-image: linear-gradient(bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+	background-image: -webkit-linear-gradient(bottom, rgba(242,242,242,0) 0%, rgba(242,242,242,1) 100%);
+	background-image: linear-gradient(bottom, rgba(242,242,242,0) 0%, rgba(242,242,242,1) 100%);
 }
 #footer .footer-wrap{
 	position: fixed;
@@ -794,11 +794,114 @@ a.linkedin:hover {
 	content:""
 }
 .single .post-content {
-	margin-top: 20px;
-	margin-bottom: 20px;	
+	margin-top: 2rem;	
+}
+.single .post-info {
+	margin-top: 2rem;
+	margin-bottom: 2rem;
 }
 .single .post-info li {
 	font-size: .875rem;
 	color: #bbb;
 }
 
+/*
+ * comments
+ */
+.comments {
+	background: #f2f2f2;
+	padding-top: 2rem;
+}
+.comments .comment {
+	margin-bottom: 2rem;
+	border-bottom: 1px dashed #898989;
+}
+.comments .comment-header {
+	float: left;
+	width: 8rem;
+	text-align: center;
+}
+.comments .comment-name {
+	font-size: 1.25rem;
+}
+.comments .comment-date {
+	display: block;
+	font-size: .75rem;
+	color: #999;
+}
+.comments .comment-content {
+	float: left;
+	margin-left: 2rem;
+	margin-top: 10px;
+}
+.comments .comment-reply-link {
+	display: block;
+	font-size: .75rem;
+	opacity: 0;
+}
+.comments .comment-container:hover>.comment-header>.comment-reply-link {
+	opacity: 1;
+}
+.children .comment {
+	margin-bottom: 0;
+	border-bottom: none;
+}
+.children .comment-name,
+.children .comment-content {
+	font-size: .875rem;
+}
+.children .comment-header,
+.children .comment-content,
+.children .comment-date,
+.children .comment-reply-link {
+	display: inline-block;
+	float: none;
+	margin: 0;
+}
+.children .comment-header {
+	width: auto;
+	text-align: left;
+	margin-left: 4rem;
+}
+.children .comment-content {
+	margin-left: 2px;
+}
+.commentnav {
+	text-align: center;
+}
+.comment-reply-title,
+#comments-title {
+	margin-bottom: 1rem;
+	font-size: 1.125rem;
+	font-family: "Microsoft JhengHei";
+}
+.comment-respond {
+	margin-top: 40px;
+	margin-bottom: 60px;
+}
+.comment-respond .input-row {
+	position: relative;
+	width: 100%;
+	margin-bottom: 1rem;
+}
+.comment-respond input,
+.comment-respond textarea {
+	font-size: 1rem;
+	font-family: inherit;
+	width: 100%;
+	padding: 10px 10px; 
+	outline: none;
+	border: 1px solid #999;
+	border-radius: .25rem;
+	box-sizing: border-box;
+}
+#submit {
+	width: auto;
+	background: #fff;
+	padding: 10px 16px;
+	outline: none;
+	border: 1px solid #999;
+	border-radius: .25rem;
+	text-transform: uppercase;
+	cursor: pointer;
+}

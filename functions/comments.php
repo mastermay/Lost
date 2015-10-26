@@ -14,9 +14,9 @@
 function comment($comment, $args, $depth) {
    $GLOBALS['comment'] = $comment;
 ?>
-   <li <?php comment_class(); ?><?php if( $depth > 2){ echo ' style="margin-left:-60px;"';} ?> id="li-comment-<?php comment_ID() ?>" itemtype="http://schema.org/Comment" itemscope="" itemprop="comment">
+   <li class="comment" id="li-comment-<?php comment_ID() ?>" itemtype="http://schema.org/Comment" itemscope="" itemprop="comment">
 
-<article id="comment-<?php comment_ID(); ?>" class="comment-container">
+<article id="comment-<?php comment_ID(); ?>" class="comment-container clearfix">
 	<div class="comment-header">
 		<span class="comment-name" itemprop="author"><?php printf(__('%s'), get_comment_author_link()) ?></span>
 		<time class="comment-date" datetime="<?php comment_time('Y/m/d H:i:s'); ?>" itemprop="datePublished"><?php echo time_ago(); ?></time>

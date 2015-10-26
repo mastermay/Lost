@@ -8,9 +8,9 @@
  * @version 1.0
  */
 ?>
-<div class="single layout-center" itemscope itemtype="http://schema.org/Article">
-	<?php lo_breadcrumbs();?>
-	<article class="single-post">
+<div class="single" itemscope itemtype="http://schema.org/Article">
+	<div class="layout-center"><?php lo_breadcrumbs();?></div>
+	<article class="single-post layout-center">
 		<header class="post-header <?php if(get_post_meta( $post->ID, '_mirana_images_b_value_key', true ) != '') echo 'hide';?>">
 			<h2 class="post-name" itemprop="name headline">
 				<a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a>
@@ -31,13 +31,14 @@
 			} ?>  
 			</div>
 		</div>
+		<ul class="post-info">
+			<li><?php echo '# ';the_category(',');?></li>
+			<li><?php the_tags('# ');?></li>
+		</ul>
 	</article>
 	
 
-	<ul class="post-info">
-		<li><?php echo '# ';the_category(',');?></li>
-		<li><?php the_tags('# ');?></li>
-	</ul>
+	
 
 	<?php comments_template('', true); ?>
 </div>
