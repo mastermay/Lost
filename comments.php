@@ -25,17 +25,17 @@ if(comments_open()) {?>
 			<nav class="commentnav" data-postid="<?php echo $post->ID?>"><?php paginate_comments_links('prev_text=«&next_text=»');?></nav>
 		</div>
 
-		<div id="respond" class="comment-respond">
+		<div id="respond" class="responses comment-respond">
 			<h5 id="replytitle" class="comment-reply-title"><?php _e("Leave a Reply","Lophita");?> <small><a rel="nofollow" id="cancel-comment-reply-link" href="#respond" style="display:none;"><?php _e("Cancel reply", 'Lophita');?></a></small></h5>
 			<form action="#" method="post" id="commentform" class="clearfix">
 				<?php if ( $user_ID ) { ?>
-				<div class="comment-saved-author fontJH">
-					<a href="<?php echo get_option('siteurl'); ?>/wp-admin/profile.php"><?php echo $user_identity; ?></a>
+				<div class="comment-saved-author">
+					<?php _e('Admin', 'Lophita');?><a href="<?php echo get_option('siteurl'); ?>/wp-admin/profile.php"><?php echo $user_identity; ?></a>
 				</div>
 				<?php } else {
 					if(!empty($comment_author) && !empty($comment_author_email)){ ?>
-						<div class="comment-saved fontJH clearfix">
-						<p><?php _e('Welcome back','Lophita'); ?><span class="show-form tooltip tip-right" data-tooltip="点击编辑个人信息"><?php echo esc_attr($comment_author); ?></span></p>
+						<div class="comment-saved clearfix">
+						<p><?php _e('Welcome back','Lophita'); ?> <span class="show-form tooltip tip-right" data-tooltip="点击编辑个人信息"><?php echo esc_attr($comment_author); ?></span></p>
 						</div>
 						<div id="comment-info" class="clearfix">
 					<?php } else { ?>

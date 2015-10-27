@@ -154,16 +154,15 @@ function ajax_comment(){
     }
     $GLOBALS['comment'] = $comment;
     ?>
-<li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>">
-	<article id="comment-<?php comment_ID(); ?>" class="comment-container">
+<li class="comment" id="li-comment-<?php comment_ID(); ?>">
+    <?php if ( '0' == $comment->comment_approved ) : ?>
+        <p class="comment-awaiting-moderation">您的评论正在排队等待审核，请稍后再来！</p>
+    <?php endif; ?>
+	<article id="comment-<?php comment_ID(); ?>" class="comment-container clearfix">
 		<div class="comment-header">
 			<span class="comment-name"><?php printf(__('%s'), get_comment_author_link()) ?></span>
 			<time class="comment-date" datetime="<?php comment_time('Y/m/d H:i:s'); ?>"><?php echo time_ago(); ?></time>
 		</div>
-		<?php if ( '0' == $comment->comment_approved ) : ?>
-			<p class="comment-awaiting-moderation">您的评论正在排队等待审核，请稍后再来！</p>
-		<?php endif; ?>
-
 		<div class="comment-content">
 			<?php comment_text() ?>
 		</div>

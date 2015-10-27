@@ -905,3 +905,14 @@ a.linkedin:hover {
 	text-transform: uppercase;
 	cursor: pointer;
 }
+.comment-saved,
+.comment-saved-author {
+	margin-bottom: 10px;
+}
+.comment-awaiting-moderation {
+	font-size: .875rem;
+	margin-bottom: 10px;
+}
+#comment-info {
+	display: none;
+}
