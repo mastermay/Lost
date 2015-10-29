@@ -11,7 +11,7 @@
  */	
 ?>
 
-<article class="archive" itemscope itemtype="http://schema.org/Article">
+<article class="archive layout-center" itemscope itemtype="http://schema.org/Article">
 	<?php if ( has_post_thumbnail() ) { ?>
 	<div class="archive-thumb">
 		<?php echo lo_get_thumb(); ?>

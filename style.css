@@ -745,14 +745,59 @@ a.linkedin:hover {
 /*
  * index post
  */
-.post {
+.post,
+.status {
 	margin-bottom: 20px;
 	padding-bottom: 20px;
 	border-bottom: 2px dashed #eee;
 }
 
+.post .post-thumb a {
+	display: block;
+	margin-bottom: 10px;
+	height: 240px;
+	overflow: hidden;
+}
+.post .post-thumb a img {
+	-webkit-transition: all 1s cubic-bezier(0.2,0.6,0.4,1);
+	transition: all 1s cubic-bezier(0.2,0.6,0.4,1)
+}
+.post .post-thumb a:hover img {
+	-webkit-transform: translateY(-40%);
+	transform: translateY(-40%)
+}
+.post .post-thumb img{
+	width: 100%;
+	height: auto;
+}
+.status {
+	position: relative;
+	font-size: 1.25rem;
+}
+.status .status-content {
+	margin-left: 4rem;
+	margin-right: 4rem;
+}
+.status:before {
+	content: "“";
+	position: absolute;
+	left: 0;
+	top: -30px;
+	font-size: 3rem;
+}
+.status:after {
+	content: "”";
+	position: absolute;
+	right: 0;
+	bottom: -30px;
+	font-size: 3rem;
+}
 
 
+
+/*
+ * pagenvi
+ */
 .pagenvi {
 	text-align: center;
 	margin-top: 40px;
@@ -844,6 +889,7 @@ a.linkedin:hover {
 }
 .children .comment {
 	margin-bottom: 0;
+	padding-bottom: 10px;
 	border-bottom: none;
 }
 .children .comment-name,
@@ -875,9 +921,16 @@ a.linkedin:hover {
 	font-size: 1.125rem;
 	font-family: "Microsoft JhengHei";
 }
+.comment-reply-title small {
+	font-size: .75rem;
+}
+
 .comment-respond {
 	margin-top: 40px;
 	margin-bottom: 60px;
+}
+.children .comment-respond {
+	padding-left: 4rem;
 }
 .comment-respond .input-row {
 	position: relative;
@@ -915,4 +968,27 @@ a.linkedin:hover {
 }
 #comment-info {
 	display: none;
+}
+
+/*
+ * archive category/tag
+ */
+.archive {
+	margin-bottom: 30px;
+	padding-bottom: 10px;
+	border-bottom: 2px dotted #e2e2e2;
+}
+
+.archive .archive-thumb {
+	float: right;
+	margin-left: 20px;
+	margin-top: 10px;
+}
+
+.archive .archive-name {
+	font-size: 1.125rem;
+}
+.archive .archive-meta li{
+	display: inline-block;
+	font-size: .75rem;
 }

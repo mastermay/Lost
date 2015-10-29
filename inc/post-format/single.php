@@ -18,7 +18,7 @@
 		</header>
 		<ul class="post-meta">
 			<li><time datetime="<?php echo esc_attr( get_the_date( 'c' ) ); ?>" itemprop="datePublished" pubdate><?php if(lo_opt('time_style')=='1') the_time('Y-m-d H:i'); elseif(lo_opt('time_style')=='2') the_time('Y/m/d H:i'); elseif(lo_opt('time_style')=='3') the_time('d-m-Y H:i'); else the_time('d/m/Y H:i');?></time></li>
-			<li><?php lo_post_views(__('Views','Lophita'));?></li>
+			<li><?php lo_post_views(' '.__('Views','Lophita'));?></li>
 		</ul>
 		<div class="post-content clearfix" itemprop="articleBody">
 			<?php the_content(); ?>

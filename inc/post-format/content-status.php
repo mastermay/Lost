@@ -10,7 +10,7 @@
  * @version 1.0
  */
 ?>
-<article class="status">
+<article class="status layout-center">
 	<div class="status-content">
         <?php the_content(); ?>
     </div>
