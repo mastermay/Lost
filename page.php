@@ -13,7 +13,7 @@ get_header();
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 <article class="page" itemtype="http://schema.org/Article" itemscope="itemscope">
-	<header class="page-header">
+	<header class="page-header layout-center">
 		<h2 class="page-name" itemprop="headline">
 			<a href="<?php the_permalink(); ?>" rel="bookmark" itemprop="url"><?php the_title(); ?></a>
 		</h2>

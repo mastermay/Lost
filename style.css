@@ -775,8 +775,7 @@ a.linkedin:hover {
 	font-size: 1.25rem;
 }
 .status .status-content {
-	margin-left: 4rem;
-	margin-right: 4rem;
+	margin: 2rem 4rem;
 }
 .status:before {
 	content: "“";
@@ -973,13 +972,15 @@ a.linkedin:hover {
 /*
  * archive category/tag
  */
-.archive-page-header {
+.archive-page-header,
+.page-header {
 	position: relative;
 	margin-bottom: 1.5rem;
 	padding-bottom: 0.5rem;
 	border-bottom: 1px dashed #c2c2c2;
 }
-.archive-page-header:after {
+.archive-page-header:after,
+.page-header:after {
 	content: "";
 	width: 5rem;
 	height: 2px;
@@ -988,7 +989,8 @@ a.linkedin:hover {
 	left: 0;
 	background: #333;
 }
-.archive-page-header .archive-title {
+.archive-page-header .archive-title,
+.page-header {
 	font-family: "Microsoft JhengHei";
 	font-size: 1.25rem;
 }
