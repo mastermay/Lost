@@ -839,7 +839,7 @@ a.linkedin:hover {
 	content:""
 }
 .single .post-content {
-	margin-top: 2rem;	
+	margin-top: 1rem;	
 }
 .single .post-info {
 	margin-top: 2rem;
@@ -973,6 +973,25 @@ a.linkedin:hover {
 /*
  * archive category/tag
  */
+.archive-page-header {
+	position: relative;
+	margin-bottom: 1.5rem;
+	padding-bottom: 0.5rem;
+	border-bottom: 1px dashed #c2c2c2;
+}
+.archive-page-header:after {
+	content: "";
+	width: 5rem;
+	height: 2px;
+	position: absolute;
+	bottom: -1px;
+	left: 0;
+	background: #333;
+}
+.archive-page-header .archive-title {
+	font-family: "Microsoft JhengHei";
+	font-size: 1.25rem;
+}
 .archive {
 	margin-bottom: 30px;
 	padding-bottom: 10px;

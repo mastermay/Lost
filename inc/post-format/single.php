@@ -11,7 +11,7 @@
 <div class="single" itemscope itemtype="http://schema.org/Article">
 	<div class="layout-center"><?php lo_breadcrumbs();?></div>
 	<article class="single-post layout-center">
-		<header class="post-header <?php if(get_post_meta( $post->ID, '_mirana_images_b_value_key', true ) != '') echo 'hide';?>">
+		<header class="post-header">
 			<h2 class="post-name" itemprop="name headline">
 				<a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a>
 			</h2>
