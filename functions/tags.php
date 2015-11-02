@@ -1,13 +1,4 @@
 <?php
-/**
- * Functions for page-tags
- *
- * @author Javis <javismay@gmail.com>
- * @license MIT
- * @since 1.0
- * @version 1.0
- */
-
 function specs_getfirstchar($s0){  
     $fchar = ord($s0{0});
     if($fchar >= ord("A") and $fchar <= ord("z") )return strtoupper($s0{0});
@@ -75,7 +66,7 @@ function specs_show_tags() {
             }
         }
         ksort($r);
-        $output = "<div class='layoutSecondary fontJH'><ul id='tag-letter'>";
+        $output = "<ul id='tag-letter'>";
         for($i=65;$i<=90;$i++){
             $tagi = $r[chr($i)];
             if(is_array($tagi)){
@@ -92,8 +83,8 @@ function specs_show_tags() {
                 $output .= "<li><a class='none' href='javascript:;'>".chr($i)."</a></li>";
             }
         }
-        $output .= "</ul></div>";
-        $output .= "<div class='layoutPrimary'><ul id='all-tags'>";
+        $output .= "</ul>";
+        $output .= "<ul id='all-tags'>";
         for($i=65;$i<=90;$i++){
             $tagi = $r[chr($i)];
             if(is_array($tagi)){
@@ -114,7 +105,7 @@ function specs_show_tags() {
 				$output .= '</div>';
             }
         }
-        $output .= "</ul></div>";
+        $output .= "</ul>";
         update_option('specs_tags_list', $output);
     }
     echo $output;

@@ -1013,3 +1013,45 @@ a.linkedin:hover {
 	display: inline-block;
 	font-size: .75rem;
 }
+
+/*
+ * page tags
+ */
+.page-tags {}
+#tag-letter {
+	text-align: center;
+}
+#tag-letter li {
+	display: inline-block;
+	margin: 1rem;
+}
+#tag-letter a {
+	display: inline-block;
+	height: 2.5rem;
+	width: 2.5rem;
+	margin: 0 auto;
+	line-height: 2.5rem;
+	border: 1px solid #999;
+}
+#tag-letter a.none {
+	cursor: not-allowed;
+	color: #c2c2c2;
+	border-color: #c2c2c2;
+}
+#tag-letter a:not(.none):hover {
+	border-color: #333;
+}
+#all-tags {
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+}
+#all-tags li {
+	margin-bottom: 1rem;
+	border-bottom: 1px dashed #c2c2c2;
+}
+#all-tags li h4 {
+	font-size: 1.5rem;
+}
+#all-tags .tag-list {
+	margin-left: 4rem;
+}
