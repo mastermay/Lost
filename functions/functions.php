@@ -12,6 +12,11 @@
  * @version 1.0
  */
 
+/**
+ * Add light box class `slimebox`
+ * 
+ * @since 1.0
+ */
 add_filter('the_content', 'lo_fancybox_replace');
 function lo_fancybox_replace ($content) {
 	global $post;
@@ -21,6 +26,11 @@ function lo_fancybox_replace ($content) {
 	return $content;
 }
 
+/**
+ * Love buttons for posts
+ * 
+ * @since 1.0
+ */
 add_action('wp_ajax_nopriv_lo_post_love', 'lo_post_love');
 add_action('wp_ajax_lo_post_love', 'lo_post_love');
 function lo_post_love(){
@@ -43,6 +53,11 @@ function lo_post_love(){
 	die;
 }
 
+/**
+ * Description
+ * 
+ * @since 1.0
+ */
 add_action('wp_head','lo_description');
 function lo_description() {
     global $s, $post;
@@ -67,6 +82,11 @@ function lo_description() {
     echo "<meta name=\"description\" content=\"$description\">\n";
 }
 
+/**
+ * Post views
+ * 
+ * @since 1.0
+ */
 add_action('wp_head', 'record_visitors'); 
 function record_visitors(){
 	if (is_singular()) {
@@ -87,6 +107,11 @@ function lo_post_views($after=''){
 	echo $views.$after;
 }
 
+/**
+ * Pagination
+ * 
+ * @since 1.0
+ */
 function lo_pagenavi($range = 5){
 	global $paged, $wp_query;
 	echo '<div class="pagenvi">';
@@ -108,6 +133,11 @@ function lo_pagenavi($range = 5){
    echo '</div>';
 }
 
+/**
+ *  Add thumbnails support
+ * 
+ * @since 1.0
+ */
 add_theme_support( 'post-thumbnails' );
 function get_post_thumb(){
 	global $post ;
@@ -121,6 +151,12 @@ function get_post_thumb(){
 	return false;
 }
 
+/**
+ * Get thumbnails. Direct output
+ * Default size is 150 X 150 (px)
+ * 
+ * @since 1.0
+ */
 function lo_thumb($width=150,$height=150){
 	global $post;
 	$img = get_post_thumb();
@@ -130,6 +166,12 @@ function lo_thumb($width=150,$height=150){
 	
 }
 
+/**
+ * Get thumbnails. Return a string
+ * Default size is 150 X 150 (px)
+ * 
+ * @since 1.0
+ */
 function lo_get_thumb($width=150,$height=150, $img=''){
 	global $post;
 	if($img){
@@ -141,6 +183,11 @@ function lo_get_thumb($width=150,$height=150, $img=''){
 	}
 }
 
+/**
+ * Bread crumbs. 
+ *
+ * @since 1.0
+ */
 function lo_breadcrumbs() {
 	$name = __('Home','Lophita');
 	echo '<ol id="crumbs" itemscope itemtype="http://schema.org/BreadcrumbList">';
@@ -179,6 +226,20 @@ function lo_get_level($id) {
 		$level += 1;
 	}
 	return $level;
+}
+
+/**
+ * Cheack if comments is opened or not.
+ * 
+ * @since 1.0
+ */
+function lo_comments_open() {
+	if(is_single()) 
+		return comments_open();
+	if(is_page_template('page-tags.php')) {
+		return false;
+	}
+	return false;
 }
 
 ?>

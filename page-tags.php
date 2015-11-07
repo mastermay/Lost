@@ -22,7 +22,6 @@ get_header();
 	</header>
     <div class="page-content layout-center clearfix" itemprop="articleBody">
 		<?php specs_show_tags();?>
-		<?php comments_template('', true); ?>
     </div>
 </article>
 	

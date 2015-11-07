@@ -1,4 +1,13 @@
 <?php
+/**
+ * Theme Lost functions for template `page-tags`
+ *
+ * @author Javis <javismay@gmail.com>
+ * @license MIT
+ * @since 1.0
+ * @version 1.0
+ */
+
 function specs_getfirstchar($s0){  
     $fchar = ord($s0{0});
     if($fchar >= ord("A") and $fchar <= ord("z") )return strtoupper($s0{0});

@@ -655,6 +655,7 @@ a.linkedin:hover {
 	background-image: linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
 }
 #header .header-wrap {
+	position: relative;
 	padding-top: 200px;
 	text-align: center;
 }
@@ -675,7 +676,17 @@ a.linkedin:hover {
 	display: inline-block;
 	margin: 0 1rem;
 }
-
+.sns {
+	position: absolute;
+	top:5rem;
+	right: 0;
+}
+.sns a {
+	margin-left: 0.5rem;
+}
+.sns i {
+	font-size: 1.125rem;
+}
 /*
  * content
  */
@@ -703,8 +714,13 @@ a.linkedin:hover {
 	top: 0;
 	height:100px;
 	width: 100%;
+	background-image: -webkit-linear-gradient(bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+	background-image: linear-gradient(bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+}
+.comments-open #footer:after {
 	background-image: -webkit-linear-gradient(bottom, rgba(242,242,242,0) 0%, rgba(242,242,242,1) 100%);
 	background-image: linear-gradient(bottom, rgba(242,242,242,0) 0%, rgba(242,242,242,1) 100%);
+
 }
 #footer .footer-wrap{
 	position: fixed;
@@ -723,6 +739,26 @@ a.linkedin:hover {
 	font-size: 0.875rem;
 	font-family: Palatino, Optima, Georgia, serif;
 	font-style: italic;
+}
+#gotop {
+	position: fixed;
+	left: 50%;
+	bottom: -100px;
+	z-index: 11;
+	display: block;
+	width: 45px;
+	height: 45px;
+	margin-left: 500px;
+	border-radius: 5px;
+	border-radius: 45px;
+	background-color: #fff;
+	background-color: #aaa;
+	color: #fff;
+	text-align: center;
+	font-size: 32px;
+	line-height: 45px;
+	-webkit-transition:all .5s ease 0s;
+	transition:all .5s ease 0s;
 }
 
 
@@ -1017,7 +1053,9 @@ a.linkedin:hover {
 /*
  * page tags
  */
-.page-tags {}
+.page-tags {
+	margin-bottom: 4rem;
+}
 #tag-letter {
 	text-align: center;
 }
@@ -1054,4 +1092,14 @@ a.linkedin:hover {
 }
 #all-tags .tag-list {
 	margin-left: 4rem;
+	margin-bottom: 2rem;
+}
+#all-tags .tag-list a {
+	margin-right: 2rem;
+}
+#all-tags .tag-list .number {
+	font-size: .75rem;
+	display: inline-block;
+	-webkit-transform: translateY(-.5rem);
+	transform: translateY(-.5rem);
 }

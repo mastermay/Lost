@@ -50,7 +50,7 @@
 </head>
 <body>
 	<div class="loading-bar"></div>
-	<div id="wrap">
+	<div id="wrap" <?php if(lo_comments_open()) echo 'class="comments-open"';?>>
 		<div id="header" class="standard">
 			<div class="header-wrap layout-center">
 				<h1 class="site-title"><a href="<?php bloginfo('url'); ?>"><?php bloginfo('name')?></a></h1>
@@ -61,6 +61,14 @@
 							wp_nav_menu(array( 'theme_location' => 'header-menu','container' => 'ul', 'menu_class' => 'menu')); 
 						}
 					?>
+				</div>
+				<div class="sns">
+					<?php if(lo_opt('sns_github')) echo '<a class="github" href ="'.lo_opt('sns_github').'" target="_blank"><i class="iconfont icon-github"></i></a>';?>
+					<?php if(lo_opt('sns_weibo')) echo '<a class="weibo" href ="'.lo_opt('sns_weibo').'" target="_blank"><i class="iconfont icon-weibo"></i></a>';?>
+					<?php if(lo_opt('sns_twitter')) echo '<a class="twitter" href ="'.lo_opt('sns_twitter').'" target="_blank"><i class="iconfont icon-twitter"></i></a>';?>
+					<?php if(lo_opt('sns_linkedin')) echo '<a class="linkedin" href ="'.lo_opt('sns_linkedin').'" target="_blank"><i class="iconfont icon-0457linkedin"></i></a>';?>
+					<?php if(lo_opt('sns_google')) echo '<a class="google" href ="'.lo_opt('sns_google').'" target="_blank"><i class="iconfont icon-googleplus3"></i></a>';?>
+					<?php if(lo_opt('sns_rss')) echo '<a class="rss" href ="'.get_bloginfo('url').'/feed" target="_blank"><i class="iconfont icon-rss"></i></a>';?>
 				</div>
 			</div>
 		</div>

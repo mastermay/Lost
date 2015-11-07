@@ -25,15 +25,15 @@ function my_theme_setup(){
     load_theme_textdomain('Lophita', get_template_directory() . '/languages');
 }
 
-register_nav_menus(array('header-menu' => '顶部导航', 'footer-menu' => '底部导航'));
+register_nav_menus(array('header-menu' => '顶部导航'));
 
 add_theme_support( 'post-formats', array( 'status'));
 
 function prefix_options_menu_filter( $menu ) {
 	$menu['mode'] = 'menu';
-	$menu['page_title'] = 'Tiny 主题设置';
-	$menu['menu_title'] = 'Tiny 主题设置';
-	$menu['menu_slug'] = 'tiny-options';
+	$menu['page_title'] = 'Lost 主题设置';
+	$menu['menu_title'] = 'Lost 主题设置';
+	$menu['menu_slug'] = 'lost-options';
 	return $menu;
 }
 add_filter( 'optionsframework_menu', 'prefix_options_menu_filter' );
