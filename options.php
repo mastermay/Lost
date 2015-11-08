@@ -35,9 +35,8 @@ function optionsframework_options() {
 	);
 	
 	$options[] = array(
-		'name' => '作者头像',
-		'desc' => '上传 90*90 大小图片，留空则默认使用 Gravatar 头像',
-		'id' => 'author_avatar',
+		'name' => '背景图片',
+		'id' => 'index_bg',
 		'type' => 'upload'
 	);
 

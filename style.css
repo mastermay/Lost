@@ -639,7 +639,7 @@ a.linkedin:hover {
 	position:relative;
 	height:600px;
 	color: #fff;
-	background:url('images/bg.jpg');
+	background-image:url('images/bg.jpg');
 	background-size: cover;
 	background-attachment: fixed;
 	z-index: 5;
@@ -703,7 +703,7 @@ a.linkedin:hover {
 #footer {
 	position:relative;
 	height:450px;
-	background:url('images/bg.jpg');
+	background-image:url('images/bg.jpg');
 	background-size: cover;
 	background-attachment: fixed;
 }
@@ -1102,4 +1102,52 @@ a.linkedin:hover {
 	display: inline-block;
 	-webkit-transform: translateY(-.5rem);
 	transform: translateY(-.5rem);
+}
+
+/**
+ * page archives
+ */
+.page-archives {
+	margin-bottom: 2rem;
+}
+.page-archives .all-posts>li {
+	position: relative;
+	padding-bottom: .75rem;
+	padding-left: 2rem;
+	margin-bottom: .75rem;
+	border-bottom: 1px dashed #e2e2e2;
+}
+.page-archives .all-posts>li:after {
+	position: absolute;
+	left: 0;
+	top: 1.75rem;
+	content: "";
+	width: 8px;
+	height: 8px;
+	background: #e2e2e2;
+	border-radius: 4px;
+	-webkit-transition: 0.5s;
+	transition: 0.5s;
+}
+.page-archives .all-posts>li:hover:after {
+	background: #666;
+}
+.page-archives .all-posts h4 {
+	font-size: 1.25rem;
+}
+.page-archives .meta li {
+	display: inline-block;
+	margin-right: 1rem;
+	color: #666;
+	font-size: .875rem;
+}
+.page-archives .meta time {
+	font-style: italic;
+}
+
+/**
+ * page 404
+ */
+.page-404 {
+	margin-bottom: 6rem;
 }

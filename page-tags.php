@@ -2,7 +2,7 @@
 /**
  * Template Name: 标签模板
  *
- * The template for displaying pages
+ * The template for post tags' page
  *
  * @author Javis <javismay@gmail.com>
  * @license MIT

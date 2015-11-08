@@ -37,7 +37,6 @@
 	<header class="post-header">
 		<h2 class="post-name" itemprop="name headline">
 			<a href="<?php the_permalink(); ?>" rel="bookmark" class="tooltip tip-right" data-tooltip="<?php echo $views.' '.__('views', 'Lophita').__(' with ', 'Lophita').$post->comment_count.' '.__('comments', 'Lophita');?>"><?php the_title(); ?></a>
-			<?php if(lo_opt('series_is_open')) { ?><sup><?php echo lo_get_category_only(get_the_ID(), 'series')?></sup><?php } ?>
 		</h2>
     </header>
 	<div class="post-meta">

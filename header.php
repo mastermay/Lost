@@ -51,7 +51,7 @@
 <body>
 	<div class="loading-bar"></div>
 	<div id="wrap" <?php if(lo_comments_open()) echo 'class="comments-open"';?>>
-		<div id="header" class="standard">
+		<div id="header" class="standard" <?php if(lo_opt('index_bg')) echo 'style="background-image: url(\''.lo_opt('index_bg').'\');"';?>>
 			<div class="header-wrap layout-center">
 				<h1 class="site-title"><a href="<?php bloginfo('url'); ?>"><?php bloginfo('name')?></a></h1>
 				<div id="header-menu">
