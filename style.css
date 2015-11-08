@@ -594,11 +594,11 @@ a.linkedin:hover {
 	display: block;
 	width: 100%;
 	height: 2px;
-	background: #96C;
-	-webkit-animation: right-shift .8s ease-in-out infinite;
-	animation: right-shift .8s ease-in-out infinite;
-	-webkit-animation-delay: .2s;
-	animation-delay: .2s;
+	background: #333;
+	-webkit-animation: right-shift 1.8s ease-in-out infinite;
+	animation: right-shift 1.8s ease-in-out infinite;
+	-webkit-animation-delay: .5s;
+	animation-delay: .5s;
 }
 
 @-webkit-keyframes right-shift {
@@ -606,10 +606,13 @@ a.linkedin:hover {
 		-webkit-transform: translateX(-100%);
 		transform: translateX(-100%);
 	}
-
-	100% {
+	50% {
 		-webkit-transform: translateX(100%);
 		transform: translateX(100%);
+	}
+	100% {
+		-webkit-transform: translateX(-100%);
+		transform: translateX(-100%);
 	}
 }
 
@@ -618,10 +621,13 @@ a.linkedin:hover {
 		-webkit-transform: translateX(-100%);
 		transform: translateX(-100%);
 	}
-
-	100% {
+	50% {
 		-webkit-transform: translateX(100%);
 		transform: translateX(100%);
+	}
+	100% {
+		-webkit-transform: translateX(-100%);
+		transform: translateX(-100%);
 	}
 }
 
