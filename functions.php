@@ -19,6 +19,7 @@ include (TEMPLATEPATH . '/functions/clear.php');
 include (TEMPLATEPATH . '/functions/comments.php');
 include (TEMPLATEPATH . '/functions/tags.php');
 include (TEMPLATEPATH . '/functions/functions.php');
+include (TEMPLATEPATH . '/functions/actions.php');
 
 add_action('after_setup_theme', 'my_theme_setup');
 function my_theme_setup(){

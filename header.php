@@ -17,36 +17,8 @@
     <meta name="viewport" content="initial-scale=1.0,user-scalable=no,minimal-ui" />
 	<meta http-equiv="Cache-Control" content="no-transform" />
 	<meta http-equiv="Cache-Control" content="no-siteapp" />
-    <title>
-	<?php
-	if(is_front_page() || is_home()) { 
-		bloginfo('name');
-		echo ' | '.get_bloginfo( 'description', 'display' );
-	} else if(is_single() || is_page()) {
-		wp_title(' |', true, 'right'); bloginfo('name');
-	} else if(is_category()) {
-		single_cat_title('', true);
-		echo ' | ';
-		bloginfo('name');
-	} else if(is_search()) {
-		printf(__('Search Result: %1$', 'Lophita' ), wp_specialchars($s, 1));
-		echo ' | ';
-		bloginfo('name');
-	} else if(is_tag()) {
-		single_tag_title('', true);
-		echo ' | ';
-		bloginfo('name');
-	} else if(is_date()) {
-		_e('Archives by Date', 'Lophita');
-	} else {
-		bloginfo('name');
-		echo ' | '.get_bloginfo( 'description', 'display' );
-	}
-	?></title>
+    <title><?php lo_title();?></title>
 	<?php wp_head(); ?>
-
-<?php if( lo_opt('header_js') != '' ) echo '<script>'.lo_opt('header_js').'</script>';?>
-<?php if( lo_opt('custom_style') != '' ) echo '<style>'.lo_opt('custom_style').'</style>';?>
 </head>
 <body>
 	<div class="loading-bar"></div>
@@ -63,12 +35,7 @@
 					?>
 				</div>
 				<div class="sns">
-					<?php if(lo_opt('sns_github')) echo '<a class="github" href ="'.lo_opt('sns_github').'" target="_blank"><i class="iconfont icon-github"></i></a>';?>
-					<?php if(lo_opt('sns_weibo')) echo '<a class="weibo" href ="'.lo_opt('sns_weibo').'" target="_blank"><i class="iconfont icon-weibo"></i></a>';?>
-					<?php if(lo_opt('sns_twitter')) echo '<a class="twitter" href ="'.lo_opt('sns_twitter').'" target="_blank"><i class="iconfont icon-twitter"></i></a>';?>
-					<?php if(lo_opt('sns_linkedin')) echo '<a class="linkedin" href ="'.lo_opt('sns_linkedin').'" target="_blank"><i class="iconfont icon-0457linkedin"></i></a>';?>
-					<?php if(lo_opt('sns_google')) echo '<a class="google" href ="'.lo_opt('sns_google').'" target="_blank"><i class="iconfont icon-googleplus3"></i></a>';?>
-					<?php if(lo_opt('sns_rss')) echo '<a class="rss" href ="'.get_bloginfo('url').'/feed" target="_blank"><i class="iconfont icon-rss"></i></a>';?>
+					<?php do_action('sns');?>
 				</div>
 			</div>
 		</div>

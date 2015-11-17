@@ -242,4 +242,35 @@ function lo_comments_open() {
 	return false;
 }
 
+/**
+ * Better Title
+ *
+ * @since 1.0
+ */
+function lo_title() {
+	if(is_front_page() || is_home()) { 
+		bloginfo('name');
+		echo ' | '.get_bloginfo( 'description', 'display' );
+	} else if(is_single() || is_page()) {
+		wp_title(' |', true, 'right'); bloginfo('name');
+	} else if(is_category()) {
+		single_cat_title('', true);
+		echo ' | ';
+		bloginfo('name');
+	} else if(is_search()) {
+		printf(__('Search Result: %1$', 'Lophita' ), wp_specialchars($s, 1));
+		echo ' | ';
+		bloginfo('name');
+	} else if(is_tag()) {
+		single_tag_title('', true);
+		echo ' | ';
+		bloginfo('name');
+	} else if(is_date()) {
+		_e('Archives by Date', 'Lophita');
+	} else {
+		bloginfo('name');
+		echo ' | '.get_bloginfo( 'description', 'display' );
+	}
+}
+
 ?>
