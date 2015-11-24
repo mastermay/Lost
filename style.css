@@ -638,6 +638,10 @@ a.linkedin:hover {
 	margin-right:auto;
 }
 
+#wrap {
+	background-color: #fff;
+}
+
 /*
  * header
  */
@@ -698,7 +702,7 @@ a.linkedin:hover {
  */
 #content {
 	position: relative;
-	margin-top: 20px;
+	padding-top: 40px;
 	background: #fff;
 	z-index: 5;
 }
@@ -789,8 +793,8 @@ a.linkedin:hover {
  */
 .post,
 .status {
-	margin-bottom: 20px;
-	padding-bottom: 20px;
+	margin-bottom: 30px;
+	padding-bottom: 30px;
 	border-bottom: 2px dashed #eee;
 }
 
@@ -913,7 +917,7 @@ a.linkedin:hover {
 .comments .comment-date {
 	display: block;
 	font-size: .75rem;
-	color: #999;
+	color: #ccc;
 }
 .comments .comment-content {
 	float: left;
@@ -999,8 +1003,7 @@ a.linkedin:hover {
 	text-transform: uppercase;
 	cursor: pointer;
 }
-.comment-saved,
-.comment-saved-author {
+.comment-saved {
 	margin-bottom: 10px;
 }
 .comment-awaiting-moderation {
@@ -1036,10 +1039,13 @@ a.linkedin:hover {
 	font-family: "Microsoft JhengHei";
 	font-size: 1.25rem;
 }
+.archive-page-header .taxonomy-description {
+	text-align: right;
+}
 .archive {
 	margin-bottom: 30px;
 	padding-bottom: 10px;
-	border-bottom: 2px dotted #e2e2e2;
+	border-bottom: 2px dotted #f2f2f2;
 }
 
 .archive .archive-thumb {
@@ -1156,4 +1162,54 @@ a.linkedin:hover {
  */
 .page-404 {
 	margin-bottom: 6rem;
+}
+
+
+/**
+ * narrow theme
+ */
+.narrow {
+	max-width: 900px;
+	width: 95%;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #ddd;
+}
+.narrow #header:after,
+.narrow #footer:after {
+	display: none;
+}
+.narrow #header {
+	height: 360px;
+	margin-top: 150px;
+	background-attachment: scroll;
+}
+.narrow #header .header-wrap {
+	padding-top: 130px;
+}
+.narrow #header .site-title {
+	font-size: 2.5rem;
+}
+.narrow .sns {
+	top: 4rem;
+}
+.narrow #footer {
+	margin-bottom: 80px;
+	height: 120px;
+	background-color: #aaa;
+	background-size: 100px 100px;
+    background-image: -webkit-gradient(linear, 0 100%, 100% 0,
+                            color-stop(.25, rgba(255, 255, 255, .2)), color-stop(.25, transparent),
+                            color-stop(.5, transparent), color-stop(.5, rgba(255, 255, 255, .2)),
+                            color-stop(.75, rgba(255, 255, 255, .2)), color-stop(.75, transparent),
+                            to(transparent));
+    background-image: linear-gradient(45deg, rgba(255, 255, 255, .2) 25%, transparent 25%,
+                        transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%,
+                        transparent 75%, transparent);
+    background-attachment: scroll;
+}
+.narrow #footer .footer-wrap {
+	position: relative;
+	bottom: 0;
+	padding-top: 20px;
 }

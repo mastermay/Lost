@@ -20,9 +20,9 @@
     <title><?php lo_title();?></title>
 	<?php wp_head(); ?>
 </head>
-<body>
+<body <?php lo_body_class();?> >
 	<div class="loading-bar"></div>
-	<div id="wrap" <?php if(lo_comments_open()) echo 'class="comments-open"';?>>
+	<div id="wrap" <?php lo_wrap_class();?> >
 		<div id="header" class="standard" <?php if(lo_opt('index_bg')) echo 'style="background-image: url(\''.lo_opt('index_bg').'\');"';?>>
 			<div class="header-wrap layout-center">
 				<h1 class="site-title"><a href="<?php bloginfo('url'); ?>"><?php bloginfo('name')?></a></h1>

@@ -33,6 +33,17 @@ function optionsframework_options() {
 		'name' => '通用设置',
 		'type' => 'heading'
 	);
+
+	$options[] = array(
+		'name' => '样式',
+		'id' => 'theme_style',
+		'std' => '1',
+		'type' => 'radio',
+		'options' => array(
+						'1' => '宽屏',
+						'2' => '窄屏'
+						)
+	);
 	
 	$options[] = array(
 		'name' => '背景图片',

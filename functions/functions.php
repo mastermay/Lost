@@ -243,6 +243,29 @@ function lo_comments_open() {
 }
 
 /**
+ * echo wrap class
+ *
+ * @since 1.0
+ */
+function lo_wrap_class() {
+	if(lo_comments_open()) {
+		echo 'class="comments-open"';
+	}
+}
+
+/**
+ * echo body class
+ *
+ * @since 1.0
+ */
+function lo_body_class() {
+	if(lo_opt('theme_style') == 2) {
+		echo 'class="narrow"';
+	}
+}
+
+
+/**
  * Better Title
  *
  * @since 1.0

@@ -172,8 +172,8 @@ function ajax_comment(){
 
 }
 function ajax_comment_err($a) {
-    header('HTTP/1.0 500 Internal Server Error');
-    header('Content-Type: text/plain;charset=UTF-8');
+    //header('HTTP/1.0 520 Internal Server Error');
+    //header('Content-Type: text/plain;charset=UTF-8');
     echo $a;
     exit;
 }
