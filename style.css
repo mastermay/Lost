@@ -705,6 +705,7 @@ a.linkedin:hover {
 	padding-top: 40px;
 	background: #fff;
 	z-index: 5;
+	overflow: hidden;
 }
 
 /*
@@ -1198,18 +1199,43 @@ a.linkedin:hover {
 	height: 120px;
 	background-color: #aaa;
 	background-size: 100px 100px;
-    background-image: -webkit-gradient(linear, 0 100%, 100% 0,
-                            color-stop(.25, rgba(255, 255, 255, .2)), color-stop(.25, transparent),
-                            color-stop(.5, transparent), color-stop(.5, rgba(255, 255, 255, .2)),
-                            color-stop(.75, rgba(255, 255, 255, .2)), color-stop(.75, transparent),
-                            to(transparent));
-    background-image: linear-gradient(45deg, rgba(255, 255, 255, .2) 25%, transparent 25%,
-                        transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%,
-                        transparent 75%, transparent);
-    background-attachment: scroll;
+	background-image: -webkit-gradient(linear, 0 100%, 100% 0,
+							color-stop(.25, rgba(255, 255, 255, .2)), color-stop(.25, transparent),
+							color-stop(.5, transparent), color-stop(.5, rgba(255, 255, 255, .2)),
+							color-stop(.75, rgba(255, 255, 255, .2)), color-stop(.75, transparent),
+							to(transparent));
+	background-image: linear-gradient(45deg, rgba(255, 255, 255, .2) 25%, transparent 25%,
+						transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%,
+						transparent 75%, transparent);
+	background-attachment: scroll;
 }
 .narrow #footer .footer-wrap {
 	position: relative;
 	bottom: 0;
 	padding-top: 20px;
+}
+.narrow .post-thumb a{
+	height: 360px;
+	margin-left: -100px;
+	margin-right: -100px;
+}
+@media screen and (max-width:900px) {
+	.narrow {
+		width: 100%;
+	}
+	.narrow #header {
+		margin-top: 0;
+	}
+	.narrow #footer {
+		margin-bottom: 0;
+	}
+	.post .post-thumb a:hover img {
+		-webkit-transform: none;
+		transform: none;
+	}
+	.narrow .post-thumb a{
+		height: auto;
+		margin-left: auto;
+		margin-right: auto;
+	}
 }

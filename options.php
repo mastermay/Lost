@@ -37,7 +37,7 @@ function optionsframework_options() {
 	$options[] = array(
 		'name' => '样式',
 		'id' => 'theme_style',
-		'std' => '1',
+		'std' => '2',
 		'type' => 'radio',
 		'options' => array(
 						'1' => '宽屏',

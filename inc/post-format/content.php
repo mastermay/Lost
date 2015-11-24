@@ -29,7 +29,7 @@
 	<?php if( has_post_thumbnail() ) { ?>
 	<figure class="post-thumb">
 		<a rel="bookmark" href="<?php the_permalink(); ?>">
-			<?php echo lo_get_thumb(700, 400); ?>
+			<?php echo lo_get_thumb(900, 600); ?>
 		</a>
 	</figure>
 	<?php } ?>
