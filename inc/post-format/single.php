@@ -36,9 +36,6 @@
 			<li><?php the_tags('# ');?></li>
 		</ul>
 	</article>
-	
-
-	
 
 	<?php comments_template('', true); ?>
 </div>

@@ -1120,6 +1120,7 @@ a.linkedin:hover {
 /**
  * page archives
  */
+.page-content,
 .page-archives {
 	margin-bottom: 2rem;
 }

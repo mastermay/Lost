@@ -18,10 +18,10 @@ get_header();
 			<a href="<?php the_permalink(); ?>" rel="bookmark" itemprop="url"><?php the_title(); ?></a>
 		</h2>
 	</header>
-    <div class="page-content layoutCenter clearfix" itemprop="articleBody">
+    <div class="page-content layout-center clearfix" itemprop="articleBody">
 		<?php the_content();?>
-		<?php comments_template('', true); ?>
     </div>
+    <?php comments_template('', true); ?>
 </article>
 	
 <?php endwhile; endif;?>
