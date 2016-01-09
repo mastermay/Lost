@@ -4,7 +4,7 @@ Theme URI:https://lophita.com/wordpress-theme-lost.html
 Author:javis
 Author URI:https://lophita.com
 Description: nice theme ;)
-Version: 0.1
+Version: 1.1
 */
 a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video {
 	margin: 0;
@@ -918,6 +918,19 @@ a.linkedin:hover {
 .single .post-info li {
 	font-size: .875rem;
 	color: #bbb;
+}
+.single .post-author {
+	position: relative;
+	padding-left: 140px;
+	padding-right: 20px;
+	margin-bottom: 2rem;
+	min-height: 90px;
+}
+.single .post-author .author-image {
+	position: absolute;
+	top: 0;
+	left: 20px;
+	border-radius: 45px;
 }
 
 /*

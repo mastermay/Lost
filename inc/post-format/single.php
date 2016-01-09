@@ -31,10 +31,27 @@
 			} ?>  
 			</div>
 		</div>
+		<div class="post-love">
+			<a href="javascript:;" data-action="ding" data-id="<?php the_ID(); ?>" class="favorite post-love-link <?php if(isset($_COOKIE['mzw_ding_'.$post->ID])) echo ' done';?>" title="Love this"><i class="fa fa-heart-o"></i> 
+			<span class="love-count">
+				<?php if( get_post_meta($post->ID,'mzw_ding',true) ){            
+                    echo get_post_meta($post->ID,'mzw_ding',true);
+                 } else {
+                    echo '0';
+                 }?>
+			</span></a>
+		</div>
 		<ul class="post-info">
 			<li><?php echo '# ';the_category(',');?></li>
 			<li><?php the_tags('# ');?></li>
 		</ul>
+		<div class="post-author">
+			<?php author_image();?>
+			<div class="author-meta">
+				<p class="name"><?php the_author(); ?></p>
+				<p class="description"><?php the_author_description(); ?></p>
+			</div>
+		</div>
 	</article>
 
 	<?php comments_template('', true); ?>

@@ -35,6 +35,12 @@ function optionsframework_options() {
 	);
 
 	$options[] = array(
+		'name' => '作者头像',
+		'id' => 'author_image',
+		'type' => 'upload'
+	);
+
+	$options[] = array(
 		'name' => '样式',
 		'id' => 'theme_style',
 		'std' => '2',

@@ -296,4 +296,13 @@ function lo_title() {
 	}
 }
 
+/**
+ * get author avatar
+ *
+ * @since 1.1
+ */
+function author_image() {
+	echo '<img class="author-image" src="'.lo_opt('author_image').'">';
+}
+
 ?>
