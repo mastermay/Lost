@@ -305,4 +305,27 @@ function author_image() {
 	echo '<img class="author-image" src="'.lo_opt('author_image').'">';
 }
 
+/**
+ * post love
+ *
+ * @since 1.2
+ */
+add_action('wp_ajax_nopriv_lo_like', 'lo_like');
+add_action('wp_ajax_lo_like', 'lo_like');
+function lo_like(){
+	global $wpdb,$post;
+	$id = $_POST["um_id"];
+	$lo_raters = get_post_meta($id,'lo_ding',true);
+	$expire = time() + 99999999;
+	$domain = ($_SERVER['HTTP_HOST'] != 'localhost') ? $_SERVER['HTTP_HOST'] : false; // make cookies work with localhost
+	setcookie('lo_ding_'.$id,$id,$expire,'/',$domain,false);
+	if (!$lo_raters || !is_numeric($lo_raters)) {
+		update_post_meta($id, 'lo_ding', 1);
+	} 
+	else {
+		update_post_meta($id, 'lo_ding', ($lo_raters + 1));
+	}
+	echo get_post_meta($id,'lo_ding',true);
+	die;
+}
 ?>

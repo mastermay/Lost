@@ -935,6 +935,19 @@ a.linkedin:hover {
 .single .post-author .name {
 	font-size: 1.125rem;
 }
+.single .post-info .right i:before{
+	display: inline-block;
+	-webkit-transition: all 0.4s ease-in-out;
+	transition: all 0.4s ease-in-out;
+}
+.single .post-info .right:hover i:before {
+	-webkit-transform: scale(1.5);
+	transform: scale(1.5);
+}
+.single .post-info .done i:before {
+	content: "\e601";
+	color: #F73737;
+}
 
 /*
  * comments

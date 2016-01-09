@@ -6,9 +6,9 @@ jQuery.fn.postLike = function() {
 	} else {
 		$(this).addClass('done');
 		var id = $(this).data("id"),
-		rateHolder = $(this).children('.count');
+		rateHolder = $(this).children('.love-count');
 		var ajax_data = {
-			action: "lo_post_love",
+			action: "lo_like",
 			um_id: id
 		};
 		$.post(ajax.ajax_url, ajax_data,

@@ -31,19 +31,22 @@
 			} ?>  
 			</div>
 		</div>
-		<div class="post-love">
-			<a href="javascript:;" data-action="ding" data-id="<?php the_ID(); ?>" class="favorite post-love-link <?php if(isset($_COOKIE['mzw_ding_'.$post->ID])) echo ' done';?>" title="Love this"><i class="fa fa-heart-o"></i> 
-			<span class="love-count">
-				<?php if( get_post_meta($post->ID,'mzw_ding',true) ){            
-                    echo get_post_meta($post->ID,'mzw_ding',true);
-                 } else {
-                    echo '0';
-                 }?>
-			</span></a>
-		</div>
-		<ul class="post-info">
-			<li><?php echo '# ';the_category(',');?></li>
-			<li><?php the_tags('# ');?></li>
+		<ul class="post-info clearfix">
+			<li class="right">
+				<a href="javascript:;" data-action="ding" data-id="<?php the_ID(); ?>" class="favorite <?php if(isset($_COOKIE['lo_ding_'.$post->ID])) echo ' done';?>" title="Love this">
+					<i class="iconfont icon-weiguanzhu"></i>
+					<span class="love-count">
+						<?php
+						if( get_post_meta($post->ID,'lo_ding',true) ){            
+							echo get_post_meta($post->ID,'lo_ding',true);
+						} else {
+							echo '0';
+						}?>
+					</span>
+				</a>
+			</li>
+			<li class="left"><?php echo '# ';the_category(',');?></li>
+			<li class="left"><?php the_tags('# ');?></li>
 		</ul>
 		<hr>
 		<div class="post-author">
