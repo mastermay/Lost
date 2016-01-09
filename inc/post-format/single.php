@@ -45,6 +45,7 @@
 			<li><?php echo '# ';the_category(',');?></li>
 			<li><?php the_tags('# ');?></li>
 		</ul>
+		<hr>
 		<div class="post-author">
 			<?php author_image();?>
 			<div class="author-meta">

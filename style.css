@@ -154,25 +154,25 @@ strong {
 hr {
 	position: relative;
 	border: none;
-	height: 60px;
+	height: 4rem;
 }
 
 hr:before {
 	position: absolute;
 	content: "";
 	display: block;
-	top: 30px;
+	top: 2rem;
 	left: 50%;
-	width: 80px;
+	width: 10rem;
 	height: 2px;
 	background-color: #e2e2e2;
-	margin-left: -40px;
+	margin-left: -5rem;
 	-webkit-transition:all .5s ease 0s;
 	transition:all .5s ease 0s;
 }
 hr:hover:before {
-	width: 180px;
-	margin-left: -90px;
+	width: 18rem;
+	margin-left: -9rem;
 }
 
 @font-face {
@@ -931,6 +931,9 @@ a.linkedin:hover {
 	top: 0;
 	left: 20px;
 	border-radius: 45px;
+}
+.single .post-author .name {
+	font-size: 1.125rem;
 }
 
 /*
