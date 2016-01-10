@@ -2,6 +2,7 @@
 
 jQuery.fn.postLike = function() {
 	if ($(this).hasClass('done')) {
+		showNotice('您已经赞过啦！');
 		return false;
 	} else {
 		$(this).addClass('done');
@@ -318,7 +319,7 @@ function() {
 });
 function showNotice(message) {
 	clearNotice();
-	$('body').append('<div class="notice"><p>' + message + '</p></div>');
+	$('body').append('<div class="notice">' + message + '</div>');
 	setTimeout("clearNotice()", 2000);
 }
 function clearNotice() {

@@ -36,13 +36,14 @@
 
 	<header class="post-header">
 		<h2 class="post-name" itemprop="name headline">
-			<a href="<?php the_permalink(); ?>" rel="bookmark" class="tooltip tip-right" data-tooltip="<?php echo $views.' '.__('views', 'Lophita').__(' with ', 'Lophita').$post->comment_count.' '.__('comments', 'Lophita');?>"><?php the_title(); ?></a>
+			<a href="<?php the_permalink(); ?>" rel="bookmark" class="tooltip tip-right" data-tooltip="<?php lo_post_love_numbers(true); echo __(' and ', 'Lophita').$post->comment_count.' '.__('comments', 'Lophita');?>"><?php the_title(); ?></a>
 		</h2>
     </header>
 	<div class="post-meta">
 		<ul>
 			<li><?php the_category(','); ?></li>
 			<li><time datetime="<?php echo esc_attr( get_the_date( 'c' ) ); ?>" itemprop="datePublished" pubdate><?php if(lo_opt('time_style')=='1') the_time('Y-m-d'); elseif(lo_opt('time_style')=='2') the_time('Y/m/d'); elseif(lo_opt('time_style')=='3') the_time('d-m-Y'); else the_time('d/m/Y');?></time></li>
+			<li><?php lo_post_views(' '.__('Views','Lophita'));?></li>
 		</ul>
 	</div>
     <div class="post-content clearfix" itemprop="description">

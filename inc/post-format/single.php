@@ -36,12 +36,7 @@
 				<a href="javascript:;" data-action="ding" data-id="<?php the_ID(); ?>" class="favorite <?php if(isset($_COOKIE['lo_ding_'.$post->ID])) echo ' done';?>" title="Love this">
 					<i class="iconfont icon-weiguanzhu"></i>
 					<span class="love-count">
-						<?php
-						if( get_post_meta($post->ID,'lo_ding',true) ){            
-							echo get_post_meta($post->ID,'lo_ding',true);
-						} else {
-							echo '0';
-						}?>
+						<?php lo_post_love_numbers(); ?>
 					</span>
 				</a>
 			</li>

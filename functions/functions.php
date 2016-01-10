@@ -328,4 +328,29 @@ function lo_like(){
 	echo get_post_meta($id,'lo_ding',true);
 	die;
 }
+
+/**
+ * get post love
+ *
+ * @since 1.2
+ */
+function lo_post_love_numbers($after=false) {
+	global $post;
+	$post_ID = $post->ID;
+	if( get_post_meta($post->ID,'lo_ding',true) ) {
+		$likes =  (int)get_post_meta($post->ID,'lo_ding',true);
+	} else {
+		$likes = 0;
+	}
+	echo $likes;
+	if (!$after) {
+		return;
+	}
+	if ( $likes > 1) {
+		echo ' '.__('likes', 'Lophita');
+	} else {
+		echo ' '.__('like', 'Lophita');
+	}
+}
+
 ?>
