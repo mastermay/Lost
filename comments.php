@@ -8,9 +8,11 @@
  * @author Javis <javismay@gmail.com>
  * @license MIT
  * @since 1.0
- * @version 1.0
+ * @version 1.1
  */
-if(comments_open()) {?>
+if(comments_open()) {
+	$comments = get_comments('post_id='.$post->ID.'&status=approve');
+?>
 
 <div class="comments">
 	<div class="layout-center clearfix">
