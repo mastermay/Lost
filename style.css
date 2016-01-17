@@ -410,7 +410,7 @@ hr:hover:before {
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
 	border-radius: 3px;
-	background-color: rgba(0,0,0,.5)!important;
+	background-color: rgba(0,0,0,.7)!important;
 	color: #ecf0f1;
 	content: attr(data-tooltip);
 	white-space: nowrap;
@@ -429,19 +429,19 @@ hr:hover:before {
 }
 
 .tooltip.tip-top:before {
-	border-top-color: rgba(0,0,0,.5);
+	border-top-color: rgba(0,0,0,.7);
 }
 
 .tooltip.tip-bottom:before {
-	border-bottom-color: rgba(0,0,0,.5);
+	border-bottom-color: rgba(0,0,0,.7);
 }
 
 .tooltip.tip-left:before {
-	border-left-color: rgba(0,0,0,.5);
+	border-left-color: rgba(0,0,0,.7);
 }
 
 .tooltip.tip-right:before {
-	border-right-color: rgba(0,0,0,.5);
+	border-right-color: rgba(0,0,0,.7);
 }
 
 .tooltip:focus,.tooltip:hover {
@@ -949,6 +949,57 @@ a.linkedin:hover {
 .single .post-info .done i:before {
 	content: "\e601";
 	color: #F73737;
+}
+
+/*
+ * post content
+ */
+.post-content h3 {
+	margin-top: 2rem;
+	margin-bottom: 0.5rem;
+	color: rgba(0, 0, 0, 0.5);
+	font-size: 1.5rem;
+}
+.post-content h3:before {
+	content: "\\";
+	display: inline-block;
+	padding-right: 1rem;
+	color: rgba(0, 0, 0, 0.5);
+}
+.post-content h2 {
+	margin-top: 1.5rem;
+	margin-bottom: 0.5rem;
+	color: rgba(0, 0, 0, 0.5);
+	font-size: 1.25rem;
+}
+.post-content h2:before {
+	content: "\\\\";
+	display: inline-block;
+	padding-right: 1rem;
+	color: rgba(0, 0, 0, 0.5);
+}
+.post-content ul {
+	margin-left: 2rem;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	list-style-type: circle;
+}
+.post-content ol {
+	margin-left: 2rem;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	list-style-type: decimal;
+}
+.post-content blockquote {
+	margin-left: 1rem;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	padding-left: 1rem;
+	color: rgba(0, 0, 0, 0.7);
+	border-left: 2px solid #111;
+}
+.post-content p {
+	margin: 1rem 0;
 }
 
 /*
