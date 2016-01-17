@@ -957,6 +957,7 @@ a.linkedin:hover {
 .post-content h3 {
 	margin-top: 2rem;
 	margin-bottom: 0.5rem;
+	margin-left: -2rem;
 	color: rgba(0, 0, 0, 0.5);
 	font-size: 1.5rem;
 }
@@ -969,6 +970,7 @@ a.linkedin:hover {
 .post-content h2 {
 	margin-top: 1.5rem;
 	margin-bottom: 0.5rem;
+	margin-left: -2rem;
 	color: rgba(0, 0, 0, 0.5);
 	font-size: 1.25rem;
 }
