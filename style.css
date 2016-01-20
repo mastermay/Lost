@@ -818,9 +818,24 @@ a.linkedin:hover {
  */
 .post,
 .status {
+	position: relative;
 	margin-bottom: 30px;
 	padding-bottom: 30px;
-	border-bottom: 2px dashed #eee;
+	border-bottom: 2px dashed #e2e2e2;
+}
+.post:after,
+.status:after {
+	content: '~';
+	position: absolute;
+	left: 50%;
+	bottom: -16px;
+	width: 32px;
+	height: 32px;
+	text-align: center;
+	line-height: 32px;
+	font-size: 32px;
+	background: #fff;
+	color: #ddd;
 }
 
 .post .post-thumb a {
@@ -841,21 +856,19 @@ a.linkedin:hover {
 	width: 100%;
 	height: auto;
 }
-.status {
+.status .status-content {
 	position: relative;
+	padding: 2rem 4rem;
 	font-size: 1.25rem;
 }
-.status .status-content {
-	margin: 2rem 4rem;
-}
-.status:before {
+.status .status-content:before {
 	content: "“";
 	position: absolute;
 	left: 0;
 	top: -30px;
 	font-size: 3rem;
 }
-.status:after {
+.status .status-content:after {
 	content: "”";
 	position: absolute;
 	right: 0;
