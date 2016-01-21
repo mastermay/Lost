@@ -301,8 +301,8 @@ function lo_title() {
  *
  * @since 1.1
  */
-function author_image() {
-	echo '<img class="author-image" src="'.lo_opt('author_image').'">';
+function author_avatar() {
+	echo '<img class="author-image" src="'.lo_opt('author_avatar').'">';
 }
 
 /**

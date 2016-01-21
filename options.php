@@ -36,7 +36,7 @@ function optionsframework_options() {
 
 	$options[] = array(
 		'name' => '作者头像',
-		'id' => 'author_image',
+		'id' => 'author_avatar',
 		'type' => 'upload'
 	);
 

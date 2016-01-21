@@ -45,7 +45,7 @@
 		</ul>
 		<hr>
 		<div class="post-author">
-			<?php author_image();?>
+			<?php author_avatar();?>
 			<div class="author-meta">
 				<p class="name"><?php the_author(); ?></p>
 				<p class="description"><?php the_author_meta('description'); ?></p>
