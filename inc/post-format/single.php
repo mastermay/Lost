@@ -48,7 +48,7 @@
 			<?php author_image();?>
 			<div class="author-meta">
 				<p class="name"><?php the_author(); ?></p>
-				<p class="description"><?php the_author_description(); ?></p>
+				<p class="description"><?php the_author_meta('description'); ?></p>
 			</div>
 		</div>
 	</article>
