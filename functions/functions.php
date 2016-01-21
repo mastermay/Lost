@@ -115,7 +115,7 @@ function lo_post_views($after=''){
 function lo_pagenavi($range = 5){
 	global $paged, $wp_query;
 	echo '<div class="pagenvi">';
-	if ( !$max_page ) {$max_page = $wp_query->max_num_pages;}
+	$max_page = $wp_query->max_num_pages;
 	if($max_page > 1){if(!$paged){$paged = 1;}
 	if($paged>1) echo '<a href="' . get_pagenum_link($paged-1) .'">＜</a>';
     if($max_page > $range){
