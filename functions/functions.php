@@ -9,7 +9,7 @@
  * @author Javis <javismay@gmail.com>
  * @license MIT
  * @since 1.0
- * @version 1.0
+ * @version 1.3
  */
 
 /**
@@ -353,4 +353,14 @@ function lo_post_love_numbers($after=false) {
 	}
 }
 
+/**
+ * add Gravatar CDN
+ *
+ * @since 1.3
+ */
+function get_ssl_avatar($avatar) {
+	$avatar = str_replace(array("www.gravatar.com", "0.gravatar.com", "1.gravatar.com", "2.gravatar.com"), "o0skf43s7.qnssl.com", $avatar);
+	return $avatar;
+}
+add_filter('get_avatar', 'get_ssl_avatar');
 ?>
