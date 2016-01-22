@@ -301,8 +301,12 @@ function lo_title() {
  *
  * @since 1.1
  */
-function author_avatar() {
-	echo '<img class="author-image" src="'.lo_opt('author_avatar').'">';
+function author_avatar($size=90) {
+	$avatar = lo_opt('author_avatar');
+	if($avatar)
+		echo '<img width="'.$size.'" height="'.$size.'" class="avatar avatar-'.$size.'" src="'.$avatar.'">';
+	else
+		echo get_avatar( get_the_author_meta('email'), $size , '' ); 
 }
 
 /**

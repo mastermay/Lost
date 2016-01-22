@@ -941,7 +941,7 @@ a.linkedin:hover {
 	margin-bottom: 2rem;
 	min-height: 90px;
 }
-.single .post-author .author-image {
+.single .post-author img {
 	position: absolute;
 	top: 0;
 	left: 20px;
