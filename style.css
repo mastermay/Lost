@@ -1181,7 +1181,8 @@ a.linkedin:hover {
 }
 
 .archive .archive-name {
-	font-size: 1.125rem;
+	font-size: 1.25rem;
+	margin-bottom: .75rem;
 }
 .archive .archive-meta li{
 	display: inline-block;
