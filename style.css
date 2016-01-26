@@ -1128,6 +1128,11 @@ a.linkedin:hover {
 	border-radius: .25rem;
 	text-transform: uppercase;
 	cursor: pointer;
+	-webkit-transition:all .5s ease 0s;
+	transition:all .5s ease 0s;
+}
+#submit:hover {
+	background: #ddd;
 }
 .comment-saved {
 	margin-bottom: 10px;
