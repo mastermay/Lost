@@ -1027,7 +1027,7 @@ a.linkedin:hover {
 .comments .comment {
 	padding-bottom: 1rem;
 	margin-bottom: 1rem;
-	border-bottom: 1px dashed #898989;
+	border-bottom: 1px dashed #ccc;
 }
 .comments .comment-container {
 	position: relative;
@@ -1085,6 +1085,7 @@ a.linkedin:hover {
 
 .commentnav {
 	text-align: center;
+	font-style: italic;
 }
 .comment-reply-title,
 #comments-title {
