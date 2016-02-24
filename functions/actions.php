@@ -46,7 +46,7 @@ add_action( 'wp_footer', 'footer_custom_code' );
  *
  */
 function footer_copyright() {
-	echo '<div class="copyright"><p>Proudly powered by <a href="https://wordpress.org/" target="_blank">WordPress</a> · Theme by <a href="http://lostg.com" target="_blank">Javis</a></p></div>';
+	echo '<div class="copyright"><p>Proudly powered by <a href="https://wordpress.org/" target="_blank">WordPress</a> · Theme by <a href="https://lostg.com" target="_blank">Javis</a></p></div>';
 }
 
 add_action( 'footer_copyright', 'footer_copyright' );
