@@ -2,9 +2,6 @@
 /**
  * Functions for comments
  *
- * The area of the page that contains both current comments
- * and the comment form.
- *
  * @author Javis <javismay@gmail.com>
  * @license MIT
  * @since 1.0
@@ -37,13 +34,13 @@ function time_ago( $type = 'commennt', $day = 30 ) {
 		echo  human_time_diff($d('U'), strtotime(current_time('mysql', 0))), '前';
 	}
 	if ($timediff > 60*60*24*$day) {
-		if(lo_opt('time_style')=='1') 
-			echo date('Y-m-d',get_comment_date('U')), ' ', get_comment_time('H:i'); 
+		if(lo_opt('time_style')=='1')
+			echo date('Y-m-d',get_comment_date('U')), ' ', get_comment_time('H:i');
 		elseif(lo_opt('time_style')=='2')
 			echo  date('Y/m/d',get_comment_date('U')), ' ', get_comment_time('H:i');
 		elseif(lo_opt('time_style')=='3')
-			echo date('d-m-Y',get_comment_date('U')), ' ', get_comment_time('H:i'); 
-		else 
+			echo date('d-m-Y',get_comment_date('U')), ' ', get_comment_time('H:i');
+		else
 			echo date('d/m/Y',get_comment_date('U')), ' ', get_comment_time('H:i');
 	};
 }
@@ -131,7 +128,7 @@ function ajax_comment(){
 	{
 		$comment_id = $commentdata['comment_ID'] = $edit_id;
 		if( ihacklog_user_can_edit_comment($commentdata,$comment_id) )
-		{  
+		{
 			wp_update_comment( $commentdata );
 		}
 		else
@@ -217,7 +214,7 @@ function ajax_comment_page_nav(){
     die;
 }
 
-add_action('comment_post','comment_mail_notify'); 
+add_action('comment_post','comment_mail_notify');
 function comment_mail_notify($comment_id) {
   $comment = get_comment($comment_id);
   $parent_id = $comment->comment_parent ? $comment->comment_parent : '';
