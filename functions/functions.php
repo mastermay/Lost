@@ -14,7 +14,7 @@
 
 /**
  * Add light box class `slimebox`
- * 
+ *
  * @since 1.0
  */
 add_filter('the_content', 'lo_fancybox_replace');
@@ -28,7 +28,7 @@ function lo_fancybox_replace ($content) {
 
 /**
  * Love buttons for posts
- * 
+ *
  * @since 1.0
  */
 add_action('wp_ajax_nopriv_lo_post_love', 'lo_post_love');
@@ -55,7 +55,7 @@ function lo_post_love(){
 
 /**
  * Description
- * 
+ *
  * @since 1.0
  */
 add_action('wp_head','lo_description');
@@ -84,10 +84,10 @@ function lo_description() {
 
 /**
  * Post views
- * 
+ *
  * @since 1.0
  */
-add_action('wp_head', 'record_visitors'); 
+add_action('wp_head', 'record_visitors');
 function record_visitors(){
 	if (is_singular()) {
 		global $post;
@@ -109,7 +109,7 @@ function lo_post_views($after=''){
 
 /**
  * Pagination
- * 
+ *
  * @since 1.0
  */
 function lo_pagenavi($range = 5){
@@ -135,15 +135,15 @@ function lo_pagenavi($range = 5){
 
 /**
  *  Add thumbnails support
- * 
+ *
  * @since 1.0
  */
 add_theme_support( 'post-thumbnails' );
 function get_post_thumb(){
 	global $post ;
 	if ( has_post_thumbnail($post->ID) ){
-		$image_id = get_post_thumbnail_id($post->ID);  
-		$image_url = wp_get_attachment_image_src($image_id,'large');  
+		$image_id = get_post_thumbnail_id($post->ID);
+		$image_url = wp_get_attachment_image_src($image_id,'large');
 		$image_url = $image_url[0];
 		//return $ap_image_url = str_replace(get_option('siteurl'),'', $image_url);
 		return $image_url;
@@ -154,7 +154,7 @@ function get_post_thumb(){
 /**
  * Get thumbnails. Direct output
  * Default size is 150 X 150 (px)
- * 
+ *
  * @since 1.0
  */
 function lo_thumb($width=150,$height=150){
@@ -163,13 +163,13 @@ function lo_thumb($width=150,$height=150){
 	if($img){
 		echo '<img itemprop="image" src="'.get_template_directory_uri().'/timthumb.php?src='.$img.'&amp;h='.$height.'&amp;w='.$width.'&amp;a=c" alt="'.get_the_title($post->ID).'">';
 	}
-	
+
 }
 
 /**
  * Get thumbnails. Return a string
  * Default size is 150 X 150 (px)
- * 
+ *
  * @since 1.0
  */
 function lo_get_thumb($width=150,$height=150, $img=''){
@@ -184,7 +184,7 @@ function lo_get_thumb($width=150,$height=150, $img=''){
 }
 
 /**
- * Bread crumbs. 
+ * Bread crumbs.
  *
  * @since 1.0
  */
@@ -230,11 +230,11 @@ function lo_get_level($id) {
 
 /**
  * Cheack if comments is opened or not.
- * 
+ *
  * @since 1.0
  */
 function lo_comments_open() {
-	if(is_single()) 
+	if(is_single())
 		return comments_open();
 	if(is_page_template('page-tags.php')) {
 		return false;
@@ -256,10 +256,10 @@ function lo_wrap_class() {
 /**
  * echo body class
  *
- * @since 1.0
+ * @since 1.1
  */
 function lo_body_class() {
-	if(lo_opt('theme_style') == 2) {
+	if(lo_opt('theme_style') != 1) {
 		echo 'class="narrow"';
 	}
 }
@@ -271,7 +271,7 @@ function lo_body_class() {
  * @since 1.0
  */
 function lo_title() {
-	if(is_front_page() || is_home()) { 
+	if(is_front_page() || is_home()) {
 		bloginfo('name');
 		echo ' | '.get_bloginfo( 'description', 'display' );
 	} else if(is_single() || is_page()) {
@@ -306,7 +306,7 @@ function author_avatar($size=90) {
 	if($avatar)
 		echo '<img width="'.$size.'" height="'.$size.'" class="avatar avatar-'.$size.'" src="'.$avatar.'">';
 	else
-		echo get_avatar( get_the_author_meta('email'), $size , '' ); 
+		echo get_avatar( get_the_author_meta('email'), $size , '' );
 }
 
 /**
@@ -325,7 +325,7 @@ function lo_like(){
 	setcookie('lo_ding_'.$id,$id,$expire,'/',$domain,false);
 	if (!$lo_raters || !is_numeric($lo_raters)) {
 		update_post_meta($id, 'lo_ding', 1);
-	} 
+	}
 	else {
 		update_post_meta($id, 'lo_ding', ($lo_raters + 1));
 	}
