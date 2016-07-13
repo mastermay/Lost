@@ -8,4 +8,4 @@ An Elegent WordPress Theme
 5. Gravatar 头像加速
 6. 文章喜欢
 
-> 正在使用的同学可留个名以作演示站点。
+演示：https://milktea.info
