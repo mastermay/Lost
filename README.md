@@ -7,5 +7,3 @@ An Elegent WordPress Theme
 4. HTML5 微数据
 5. Gravatar 头像加速
 6. 文章喜欢
-
-演示：https://milktea.info
